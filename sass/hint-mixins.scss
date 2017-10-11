@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+/** 
+ * hint-mixins.scss 
+ */
+
+
+// 浏览器供应商前缀
+@mixin vendor($property, $value) {
+	-wekbit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	#{$property}: $value;
+}
+

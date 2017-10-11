@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/**  hint.scss  */
+/**  hint-settings.scss  */
+/**  hint-mixins.scss  */
+/**  hint-core.scss  */
+[class*="hint--"] { position: relative; display: inline-block; }
+[class*="hint--"]:before, [class*="hint--"]:after { position: absolute; visibility: hidden; opacity: 0; z-index: 999999; -wekbit-transition: 0.3s; -moz-transition: 0.3s; transition: 0.3s; }
+[class*="hint--"]:hover:before, [class*="hint--"]:hover:after, [class*="hint--"]:focus:before, [class*="hint--"]:focus:after { visibility: visible; opacity: 1; }
+[class*="hint--"]:before { content: ""; position: absolute; background: transparent; border: 6px solid transparent; }
+[class*="hint--"]:after { content: attr(data-hint); background: #383838; color: #FFF; padding: 8px 10px; font-size: 12px; line-height: 12px; border-radius: 5px; white-space: nowrap; }
+
+.hint--top:before { border-top-color: #383838; }
+
+.hint--bottom:before { border-bottom-color: #383838; }
+
+.hint--left:before { border-left-color: #383838; }
+
+.hint--right:before { border-right-color: #383838; }
+
+/**  hint-position.scss  */
+/**  垂直定位 top bottom */
+/**  水平定位 left right */
+/** top tooltip */
+.hint--top:before, .hint--top:after { -wekbit-transform: translateX(-50%); -moz-transform: translateX(-50%); transform: translateX(-50%); left: 50%; }
+.hint--top:before { bottom: calc(100% - 6px); }
+.hint--top:after { bottom: calc(100% + 6px); }
+.hint--top:hover:before, .hint--top:hover:after, .hint--top:focus:before, .hint--top:focus:after { -wekbit-transform: translateX(-50%) translateY(-8px); -moz-transform: translateX(-50%) translateY(-8px); transform: translateX(-50%) translateY(-8px); }
+
+/** bottom tooltip */
+.hint--bottom:before, .hint--bottom:after { -wekbit-transform: translateX(-50%); -moz-transform: translateX(-50%); transform: translateX(-50%); left: 50%; }
+.hint--bottom:before { top: calc(100% - 6px); }
+.hint--bottom:after { top: calc(100% + 6px); }
+.hint--bottom:hover:before, .hint--bottom:hover:after, .hint--bottom:focus:before, .hint--bottom:focus:after { -wekbit-transform: translateX(-50%) translateY(8px); -moz-transform: translateX(-50%) translateY(8px); transform: translateX(-50%) translateY(8px); }
+
+/** left tooltip */
+.hint--left:before { left: -6px; top: calc(50% - 6px); }
+.hint--left:after { right: calc(100% + 6px); bottom: 50%; margin-bottom: -14px; }
+.hint--left:hover:before, .hint--left:hover:after, .hint--left:focus:before, .hint--left:focus:after { -wekbit-transform: translateX(-8px); -moz-transform: translateX(-8px); transform: translateX(-8px); }
+
+/** g tooltip */
+.hint--right:before { right: -6px; top: calc(50% - 6px); }
+.hint--right:after { left: calc(100% + 6px); bottom: 50%; margin-bottom: -14px; }
+.hint--right:hover:before, .hint--right:hover:after, .hint--right:focus:before, .hint--right:focus:after { -wekbit-transform: translateX(8px); -moz-transform: translateX(8px); transform: translateX(8px); }
+
+/**  hint-theme.scss  */
+/** tolltip info */
+.hint--info:after { background: #336DB1; color: #FFF; }
+.hint--info.hint--top:before { border-top-color: #336DB1; }
+.hint--info.hint--bottom:before { border-bottom-color: #336DB1; }
+.hint--info.hint--left:before { border-left-color: #336DB1; }
+.hint--info.hint--right:before { border-right-color: #336DB1; }
+
+/** tolltip success */
+.hint--success:after { background: #8AD85F; color: #FFF; }
+.hint--success.hint--top:before { border-top-color: #8AD85F; }
+.hint--success.hint--bottom:before { border-bottom-color: #8AD85F; }
+.hint--success.hint--left:before { border-left-color: #8AD85F; }
+.hint--success.hint--right:before { border-right-color: #8AD85F; }
+
+/** tolltip warn */
+.hint--warn:after { background: #FB9A4B; color: #FFF; }
+.hint--warn.hint--top:before { border-top-color: #FB9A4B; }
+.hint--warn.hint--bottom:before { border-bottom-color: #FB9A4B; }
+.hint--warn.hint--left:before { border-left-color: #FB9A4B; }
+.hint--warn.hint--right:before { border-right-color: #FB9A4B; }
+
+/** tolltip error */
+.hint--error:after { background: #AB2915; color: #FFF; }
+.hint--error.hint--top:before { border-top-color: #AB2915; }
+.hint--error.hint--bottom:before { border-bottom-color: #AB2915; }
+.hint--error.hint--left:before { border-left-color: #AB2915; }
+.hint--error.hint--right:before { border-right-color: #AB2915; }
+
+/*# sourceMappingURL=hint.css.map */

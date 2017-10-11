@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+
+
+
+/** 
+ * hint-core.scss 
+ */
+
+
+[class*="hint--"] {
+
+	position: relative;
+	display: inline-block;
+	
+	// before after css styels
+	&:before, &:after {
+
+		position: absolute;
+	
+		visibility: hidden;
+		opacity: 0;
+
+		z-index: $zIndex;
+
+		// transition
+		@include vendor('transition', $trnasition);
+
+	}
+
+	// 悬停到此元素时
+	&:hover:before, &:hover:after, 
+	&:focus:before, &:focus:after {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	// Tooltip arrow
+	&:before {
+		content: "";
+		position: absolute;
+		background: transparent;
+		border: $arrowBorderWidth solid transparent;
+	}
+
+	// Tooltip body
+	&:after {
+		content: attr(data-hint);
+		background: $backgroundColor;
+		color: $fontColor;
+		padding: $verticalPadding $horizontalPadding;
+		font-size: $fontSize;
+		line-height: $fontSize;
+		border-radius: $borderRadius;
+		white-space: nowrap;
+	}
+
+}
+
+.#{$prefix}top:before {
+	border-top-color: $arrowBorderColor;
+}
+.#{$prefix}bottom:before {
+  border-bottom-color: $arrowBorderColor;
+}
+
+.#{$prefix}left:before {
+  border-left-color: $arrowBorderColor;
+}
+
+.#{$prefix}right:before {
+  border-right-color: $arrowBorderColor;
+}

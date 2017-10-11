@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+
+
+
+/** 
+ * hint-settings.scss 
+ */
+
+
+
+ // 前缀 BEM 修饰类 
+$prefix: "hint--" !default;
+
+// 字体大小
+$fontSize: 12px !default;
+
+// 字体颜色
+$fontColor: #FFF;
+
+// Tooltip的z-index
+$zIndex: 999999 !default;
+
+// Tooltip动画
+$trnasition: .3s !default;
+
+// Toolltip的arrow的大小[宽度]
+$arrowBorderWidth: 6px !default;
+
+// Tooltip的arrow默认颜色
+$arrowBorderColor: #383838;
+
+// Tooltip默认的背景颜色
+$backgroundColor: hsl(0, 0%, 22%) !default;
+
+// Tolltip body的padding
+$verticalPadding: 8px !default;
+$horizontalPadding: 10px !default;
+
+// Tooltip的高度
+$tooltipHeight: $fontSize + 2 * $verticalPadding !default;
+
+// Tooltip离元素的距离 过度的距离
+$transitionDistance: 8px !default;
+
+// 再来个borderRadius吧
+$borderRadius: 5px;

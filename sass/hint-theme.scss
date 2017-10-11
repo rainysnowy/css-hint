@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+
+
+
+/** 
+ * hint-theme.scss 
+ */
+
+// 一般来说背景颜色和箭头的颜色都是一样的.
+@mixin theme($backgroundColor, $fontColor: #FFF, $arrowBorderColor: $backgroundColor) {
+	&:after {
+		background: $backgroundColor;
+		color: $fontColor;
+	}
+
+	&.#{$prefix}top:before {
+		border-top-color: $arrowBorderColor;
+	}
+	&.#{$prefix}bottom:before {
+	  border-bottom-color: $arrowBorderColor;
+	}
+
+	&.#{$prefix}left:before {
+	  border-left-color: $arrowBorderColor;
+	}
+
+	&.#{$prefix}right:before {
+	  border-right-color: $arrowBorderColor;
+	}
+}
+
+
+/**
+ * tolltip info
+ */
+.#{$prefix}info {
+	@include theme(#336DB1);
+}
+
+/**
+ * tolltip success
+ */
+.#{$prefix}success {
+	@include theme(#8AD85F);
+}
+
+/**
+ * tolltip warn
+ */
+.#{$prefix}warn {
+	@include theme(#FB9A4B);
+}
+
+/**
+ * tolltip error
+ */
+.#{$prefix}error {
+	@include theme(#AB2915);
+}
