@@ -1,2 +1,2 @@
-# Sass-Css-Tooltip-Hint
-基于Sass编写的Tooltip 纯CSS文本提示.
+# Css3 Tooltip
+基于Sass编写的Tooltip
